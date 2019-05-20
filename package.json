@@ -1,0 +1,15 @@
+{
+  "name": "pug-scss-boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:JeDTr/pug-scss-boilerplate.git",
+  "author": "Tran Van Thong <tvthong1995@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^9.5.1",
+    "node-sass": "^4.12.0",
+    "postcss-cli": "^6.1.2",
+    "pug": "^2.0.3",
+    "pug-cli": "^1.0.0-alpha6"
+  }
+}
