@@ -2,14 +2,32 @@
   "name": "pug-scss-boilerplate",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "scss": "node-sass --output-style compressed -o dist/css src/assets/scss",
+    "autoprefixer": "postcss -u autoprefixer -r dist/css/*",
+    "lint:js": "eslint src/assets/js",
+    "browserify": "browserify src/assets/js/main.js -o dist/js/main.js",
+    "uglifyjs": "uglifyjs dist/js/main.js -o dist/js/main.js",
+    "build:css": "yarn scss && yarn autoprefixer",
+    "build:js": "yarn browserify && yarn uglifyjs",
+    "build:html": "pug src/template/pages -o dist/"
+  },
   "repository": "git@github.com:JeDTr/pug-scss-boilerplate.git",
   "author": "Tran Van Thong <tvthong1995@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^9.5.1",
+    "browserify": "^16.2.3",
+    "eslint": "^5.16.0",
     "node-sass": "^4.12.0",
     "postcss-cli": "^6.1.2",
     "pug": "^2.0.3",
-    "pug-cli": "^1.0.0-alpha6"
+    "pug-cli": "^1.0.0-alpha6",
+    "stylelint": "^10.0.1",
+    "uglify-js": "^3.5.14"
+  },
+  "dependencies": {
+    "bootstrap": "4.3.1",
+    "jquery": "^3.4.1"
   }
 }
